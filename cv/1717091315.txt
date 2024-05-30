@@ -1,0 +1,128 @@
+### Plan du Cours sur la Persistance des Données
+
+Le plan du cours sur la persistance des données aborde les éléments suivants:
+
+- **Introduction**
+- **Préférences Partagées**
+- **Stockage dans un Fichier Local**
+  - Interne
+  - Externe
+- **Bases de Données & Fournisseurs de Contenu**
+- **Services REST (REpresentational State Transfer)**
+
+La persistance des données consiste à sauvegarder les données de manière permanente, pouvant être réalisée de différentes manières, telles que localement (fichier local, SQLite) ou à distance (REST, cloud, Firebase, etc.).
+
+### Pourquoi Persister les Données?
+
+1. Accéder à des données métier.
+2. Avoir un référentiel local de travail.
+3. Faire vivre les données au-delà des applications.
+4. Partager les données entre applications.
+
+### Méthodes de Persistance
+
+- Paramètres locaux
+- Stockage Interne
+- Stockage Externe
+- Bases de Données (SQLite, REST)
+
+ Comment Choisir la Méthode de Persistance?
+
+Le choix dépend de:
+- Types de données
+- Volume
+- Requêtes
+- Synchronisation
+
+Persistance Locale vs Cloud
+
+- **Mode Offline:**
+  - Performance
+  - Difficultés de mises à jour du schéma et de synchronisation
+- **Mode Online:**
+  - Facile à partager
+  - Montée en charge
+  - Peu de souci de synchronisation
+  - Consomme de la bande passante
+
+### Préférences Partagées
+
+- Mécanisme de stockage clé/valeur
+- Idéal pour stocker des données basiques (entiers, booléens, etc.)
+- Convient aux paramètres persistés
+
+### Préférences Partagées et Préférences
+
+Il existe deux types: par activité (préférences) et partagées. Les méthodes `getPrefences()` et `getSharedPreferences()` permettent de récupérer les préférences de l'activité et les préférences partagées respectivement en lisant les données en fournissant une clé.
+
+Cette planification du cours offre une vue d'ensemble des concepts clés liés à la persistance des données et des différentes approches pour stocker et gérer efficacement les données de manière permanente.
+### Maquette de l'Interface Utilisateur:
+
+Pour la maquette de l'interface utilisateur de l'application qui permet aux étudiants de consulter leurs notes, contacter l'administration de leur département, demander des documents, et déposer des justificatifs d'absence, voici une proposition basée sur les fonctionnalités mentionnées :
+
+#### Écrans:
+1. **Écran d'Accueil**:
+   - Affiche le logo de l'application et un message de bienvenue.
+   - Boutons d'accès rapide aux fonctionnalités principales.
+
+2. **Consultation des Notes**:
+   - Affiche les différentes matières et les notes associées.
+   - Possibilité de filtrer par semestre ou matière.
+
+3. **Contact avec l'Administration**:
+   - Formulaire de contact avec des champs pour le sujet, le message, et les coordonnées de l'étudiant.
+   - Bouton d'envoi du message.
+
+4. **Demande de Documents**:
+   - Liste des documents disponibles à télécharger.
+   - Bouton de demande spécifique pour un document non disponible.
+
+5. **Dépôt de Justificatifs**:
+   - Formulaire de dépôt avec des champs pour sélectionner le type de justificatif et joindre le fichier.
+   - Bouton de soumission du justificatif.
+
+#### Composants:
+- **Boutons d'Action** : Utilisés pour naviguer entre les différentes fonctionnalités de l'application.
+- **Listes Déroulantes** : Pour sélectionner des options comme le semestre, la matière, ou le type de document.
+- **Zones de Texte** : Pour saisir des messages, des coordonnées, ou des informations spécifiques.
+- **Notifications** : Pour afficher les messages de l'administration, les confirmations de soumission, ou les alertes importantes.
+
+Pour visualiser un exemple concret de cette maquette, veuillez consulter l'image ci-dessous :
+
+Exemple de Maquette de l'Interface Utilisateur
+### Réponses aux Questions:
+
+#### Question 1:
+Les différences entre le développement Mobile et le développement Desktop sont les suivantes:
+- **Plateforme et Taille d'Écran** : Les applications mobiles sont conçues pour des plateformes mobiles telles qu'Android et iOS, avec des tailles d'écran plus petites, tandis que les applications desktop sont destinées aux ordinateurs de bureau avec des écrans plus grands.
+- **Interaction Utilisateur** : Les applications mobiles sont souvent conçues pour une interaction tactile, tandis que les applications desktop peuvent utiliser des interactions souris/clavier.
+- **Connectivité** : Les applications mobiles sont souvent conçues pour une connectivité constante, tandis que les applications desktop peuvent fonctionner hors ligne.
+- **Expérience Utilisateur** : Les applications mobiles sont généralement plus axées sur la simplicité et la mobilité, tandis que les applications desktop peuvent offrir des fonctionnalités plus avancées et complexes.
+
+#### Question 2:
+Le Back-end et le Front-end dans une application mobile se distinguent comme suit:
+- **Back-end** : Gère la logique métier et les données. Exemples de technologies : PHP, Python, Java, GO, Node.js.
+- **Front-end** : Responsable de l'interface utilisateur. Exemples de technologies : Java pour Android, Swift pour iOS, React Native.
+
+#### Question 3:
+Dans une application mobile, les données peuvent être stockées de différentes manières, notamment :
+- **Base de Données Locale** : Stockage interne sur l'appareil.
+- **Stockage Externe** : Utilisation de fichiers externes pour stocker des données.
+- **Base de Données Distante** : Stockage sur un serveur distant via une API REST.
+- **Stockage dans le Cloud** : Utilisation de services cloud comme Firebase pour stocker des données.
+
+#### Question 4:
+A- **Diagramme de Cas d'Utilisation** :
+   - Acteurs : Étudiants, Administration du Département.
+   - Fonctionnalités : Consulter les notes, Contacter l'administration, Demander des documents, Déposer des justificatifs.
+
+B- **Architecture de l'Application** :
+   - **Back-end** : Utilisation de PHP pour les services web et la gestion des données.
+   - **Front-end** : Utilisation de Java pour l'application Android, avec des requêtes HTTP pour communiquer avec le Back-end.
+
+C- **Maquette de l'Interface Utilisateur** :
+   - **Écrans** : Écran d'accueil, Consultation des notes, Contact avec l'administration, Demande de documents, Dépôt de justificatifs.
+   - **Composants** : Boutons d'action, Listes déroulantes, Zones de texte, Notifications pour les messages de l'administration.
+
+Citations:
+[1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/6437997/bc53d7d9-b2f9-4779-bdad-e51a8746a17b/paste.txt
