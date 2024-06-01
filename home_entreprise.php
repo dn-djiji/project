@@ -277,6 +277,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             users.niveau,
             users.cv,
             users.email,
+            users.sexe,
             users.service_national,
             orders.nom_du_travail,
             orders.cv,
@@ -307,10 +308,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <td><?= $row['adresse']; ?></td>
                 <td><?= $row['phone']; ?></td>
                 <td><?= $row['competences']; ?></td>
+                <td><?= $row['sexe']; ?></td>
                 <td><?= $row['experience']; ?></td>
                 <td><?= $row['niveau']; ?></td>
                 <td><?= $row['service_national']; ?></td>
-                <td><?= $row['nom_du_travail']; ?></td>
+              
 
                 <td>
                <?php if($row['cv'] != ""){ ?> 
